@@ -223,7 +223,7 @@ function hwcoe_legacy_shortcode_rightcol($atts, $content = null) {
 			$right_float .= $content;
 			
 	$right_float .= "</div>";
-	$right_float .= "<div class='cf'>&nbsp;</div>";
+	$right_float .= "<div class=\"cf\">&nbsp;</div>";
 
 	return $right_float;
 }
@@ -235,7 +235,7 @@ function hwcoe_legacy_shortcode_clear_floats($atts, $content = null) {
 	), $atts));
 	$content = do_shortcode($content);
 		
-	$float_clear .= "<div class='cf'>&nbsp;</div>";
+	$float_clear = "<div class=\"cf\">&nbsp;</div>";
 	
 	return $float_clear;
 }

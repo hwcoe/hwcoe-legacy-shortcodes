@@ -14,5 +14,10 @@ Contains the following shortcodes from the UF/Gator Engineering Template Respons
 
 == Changelog ==
 
+1.0.1
+-----
+- Bug fix: variable definition
+
 1.0
-Initial version
+---
+- Initial version
