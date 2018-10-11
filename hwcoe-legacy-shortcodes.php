@@ -63,8 +63,8 @@ add_shortcode('tagcloud', 'hwcoe_legacy_tagcloud_shortcode');
 
 // Display posts via shortcode
 // From: http://www.billerickson.net/shortcode-to-display-posts/
-add_shortcode('display-posts', 'be_display_posts_shortcode');
-function be_display_posts_shortcode($atts) {
+add_shortcode('display-posts', 'hwcoe_legacy_display_posts_shortcode');
+function hwcoe_legacy_display_posts_shortcode($atts) {
 	// Pull in shortcode attributes and set defaults
 	extract( shortcode_atts( array(
 		'post_type' => 'post',
@@ -166,10 +166,10 @@ function be_display_posts_shortcode($atts) {
 		else $excerpt = '';
 
 		if( $include_content ) {
-			add_filter( 'shortcode_atts_display-posts', 'be_display_posts_off', 10, 3 );
+			add_filter( 'shortcode_atts_display-posts', 'hwcoe_legacy_display_posts_off', 10, 3 );
 			/** This filter is documented in wp-includes/post-template.php */
 			$content = '<div class="content">' . apply_filters( 'the_content', get_the_content() ) . '</div>';
-			remove_filter( 'shortcode_atts_display-posts', 'be_display_posts_off', 10, 3 );
+			remove_filter( 'shortcode_atts_display-posts', 'hwcoe_legacy_display_posts_off', 10, 3 );
 		}
 		else $content = '';
 		
